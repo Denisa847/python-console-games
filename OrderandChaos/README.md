@@ -1,81 +1,65 @@
-# 🚀 Stellar Journey
+# 🎮 Order & Chaos
 
-**Stellar Journey** is a small terminal-based strategy game written in **Python**.
+**Order & Chaos** is a terminal-based strategy game written in **Python**.
 
-You control a spaceship navigating through a sector of space filled with **stars** and hidden **Blingon enemy ships**. Your goal is to eliminate all enemy ships while avoiding obstacles and dangerous warp destinations.
+Two opposing forces battle on a **6×6 board**:
 
-The game is played entirely in the terminal using simple text commands.
+- **Order** tries to create **five identical symbols in a row**
+- **Chaos** tries to **prevent this until the board is full**
 
----
-
-## 🎮 How the Game Works
-
-The game takes place on an **8x8 grid** representing a sector of space.
-
-At the start of the game:
-
-- 🚀 1 player ship is placed randomly
-- ⭐ 10 stars are placed randomly
-- 👾 3 Blingon enemy ships are placed randomly
-
-The player's mission is to **destroy all enemy ships**.
-
-However, the player cannot see the entire board.
-
-### What the Player Can See
-
-The visible board only shows:
-
-- ⭐ Stars
-- 🚀 Your ship
-- 👾 Enemy ships that are **adjacent to your ship**
-
-Enemy ships that are farther away remain hidden.
+The game is played entirely in the **terminal**, where the player places pieces while the computer responds with its own moves.
 
 ---
 
-## 🕹️ Commands
+## 🎯 Game Objective
 
-| Command | Description |
-|-------|-------------|
-| `warp <coordinate>` | Move your ship |
-| `fire <coordinate>` | Fire at an adjacent sector |
-| `cheat` | Reveal the full board |
+The game is played on a **6×6 grid**.
 
-Example commands:
+Each turn, a player can place either:
 
-```
-warp B4
-fire C5
-cheat
-```
+- `X`
+- `O`
 
----
+Unlike games like Tic-Tac-Toe, players are **not restricted to one symbol**.
 
-## 🧭 Movement Rules
+### Order Wins
 
-Your ship can **warp** to another coordinate only if it is:
+Order wins if **five identical symbols appear consecutively**:
 
-- on the same **row**
-- on the same **column**
-- on the same **diagonal**
+- horizontally
+- vertically
+- diagonally
 
-Warping is **not allowed** if a **star blocks the path**.
+### Chaos Wins
 
-If you warp onto a sector containing an enemy ship, the game ends immediately.
+Chaos wins if the **board becomes full without any five-in-a-row sequence**.
 
 ---
 
-## 💥 Combat
+## 🕹️ How to Play
 
-You can fire only at sectors **adjacent to your ship**.
+When the game starts, an empty board is displayed.
 
-If an enemy ship is located there:
+Each turn the player enters:
 
-- the enemy ship is destroyed
-- remaining enemy ships are **randomly repositioned**
+- piece (`X` or `O`)
+- row
+- column
 
-Destroy all enemy ships to **win the game**.
+The computer will then automatically make its move.
+
+The game continues until either **Order wins** or **Chaos wins**.
+
+---
+
+## 🤖 Computer Strategy
+
+The computer opponent follows a simple decision strategy:
+
+1. Check if there is an **immediate winning move**
+2. Choose the symbol (`X` or `O`) that keeps the board balanced
+3. Place the piece in a position with the **most neighboring matching symbols**
+4. If no strategic position exists, place randomly
 
 ---
 
@@ -83,22 +67,19 @@ Destroy all enemy ships to **win the game**.
 
 | Symbol | Meaning |
 |------|--------|
-| `E` | Player ship |
-| `B` | Blingon enemy ship |
-| `*` | Star |
+| `X` | X piece |
+| `O` | O piece |
 | ` ` | Empty space |
 
 ---
 
 ## 🧠 Concepts Practiced
 
-This project explores:
+This project explores several programming concepts:
 
-- Basic object-oriented programming in Python
-- Separating board logic, game logic, and UI
-- Grid-based movement systems
-- Random object placement
-- Command-based terminal interaction
-- Simple unit testing with `unittest`
-
----
+- Object-Oriented Programming in Python
+- Separation of concerns (Board / Controller / UI)
+- Grid-based game logic
+- Simple AI decision making
+- Input validation
+- Unit testing with `unittest`

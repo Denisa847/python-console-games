@@ -84,5 +84,6 @@ This small project explores:
 * Simple string manipulation
 * File input for loading data
 * Command-based terminal interaction
+* Unit testing with unittest
 
 ---

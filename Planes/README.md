@@ -1,4 +1,4 @@
-# ✈️ Planes Battle Game (Python)
+# ✈️ Planes Battle Game
 
 A console-based strategy game written in **Python** where the player battles a computer opponent by locating and destroying hidden planes on a grid.
 

@@ -1,52 +1,40 @@
-✈️ Planes Battle Game (Python)
+# ✈️ Planes Battle Game (Python)
 
-A console-based strategy game implemented in Python where the player battles against a computer opponent by locating and destroying hidden planes on a grid.
+A console-based strategy game written in **Python** where the player battles a computer opponent by locating and destroying hidden planes on a grid.
 
-The game demonstrates object-oriented programming, modular project structure,  a basic AI opponent, and unit tests.
+This project demonstrates **object-oriented programming**, a **modular project structure**, a **basic AI opponent**, and **unit testing**.
 
-🎮 Game Overview
+---
 
-The game takes place on a 10x10 grid where both the player and the computer have three hidden planes placed randomly.
+## 🎮 Game Overview
 
-Each turn:
+The game takes place on a **10×10 grid** where both the player and the computer have **three hidden planes** placed randomly.
 
-The player enters a coordinate to attack.
+Each turn follows this sequence:
 
-The system checks whether the shot was a hit, miss, or destroyed a plane.
+1. The player enters a coordinate to attack.
+2. The system determines whether the attack is a **hit**, **miss**, or **destroys a plane**.
+3. The computer takes its turn using a simple AI strategy.
 
-The computer then takes its turn using a simple AI strategy.
+The game continues until **all planes from one side are destroyed**.
 
-The game continues until all planes of one side are destroyed.
+---
 
-🧠 Key Concepts Demonstrated
+## ✨ Features
 
-This project demonstrates several important programming concepts:
+- Human vs Computer gameplay
+- Hidden plane placement on a grid
+- Basic AI opponent
+- Console interface for user interaction
+- Input validation and error handling
+- Unit tests using `unittest`
+- Modular and maintainable project structure
 
-Object-Oriented Programming (OOP)
+---
 
-Separation of Concerns
+## 🧩 Game Rules
 
-Modular Project Design
-
-Unit tests using unittest
-
-Exception Handling
-
-User Input Validation
-
-Game Loop Implementation
-
-Basic AI Strategy
-
-
-🧩 Game Rules
-
-The board size is 10 × 10.
-
-Each side has 3 planes.
-
-Planes occupy 3 connected cells (horizontal or vertical).
-
-Players shoot by entering coordinates: row column
-
-
+- The board size is **10 × 10**.
+- Each side has **3 planes**.
+- A plane occupies **3 connected cells** (horizontal or vertical).
+- Players attack by entering coordinates:

@@ -1,45 +1,44 @@
-🎮 Obstruction Game in Python
+# 🎮 Obstruction Game in Python
 
-A simple console-based Obstruction Game built in Python using object-oriented design, custom exceptions, a basic AI opponent, and unit tests.
+A console-based implementation of the **Obstruction** game written in **Python**.
 
-🧠 Overview
+This project was built using **object-oriented programming** and includes a playable terminal interface, a basic AI opponent, custom exceptions, and unit tests.
 
-This project is a playable implementation of the Obstruction board game where a human player competes against the computer on a square grid.
+---
 
-Each move places a marker on the board and blocks the surrounding cells, reducing the available space for future moves.
+## 🧠 Overview
 
-The player who makes the last possible move wins.
+**Obstruction** is a two-player strategy game played on a square grid.
 
-✨ Features
+In this version, a human player competes against the computer.  
+On each turn, a player places a marker on an empty cell. Once a marker is placed, all surrounding empty cells become **blocked**, making them unavailable for future moves.
 
-Human vs Computer gameplay
+The game continues until no valid moves remain.
 
-Board blocking mechanics
+The player who makes the **last possible move wins**.
 
-Basic AI opponent that:
+---
 
-searches for winning moves
+## ✨ Features
 
-blocks opponent winning moves
+- Human vs Computer gameplay
+- Grid-based blocking mechanics
+- Basic AI opponent that:
+  - searches for winning moves
+  - blocks the opponent’s winning moves
+  - selects a random valid move when no better option exists
+- Custom exception handling
+- Unit tests with `unittest`
+- Console board rendering with `texttable`
+- Colored terminal output with `colorama`
 
-selects a random valid move when no better option exists
+---
 
-Custom exception handling
+## 🎯 Game Rules
 
-Unit tests using unittest
+- The board starts empty
+- Players take turns placing a marker
+- When a marker is placed, all surrounding empty cells become blocked
+- Blocked cells cannot be used
+- The player who makes the last valid move wins
 
-Console board rendering using texttable
-
-Colored console output using colorama
-
-🎯 Rules
-
-The board starts empty.
-
-Players take turns placing a marker.
-
-When a marker is placed, all surrounding empty cells become blocked.
-
-Blocked cells cannot be played.
-
-The player who makes the last valid move wins.
